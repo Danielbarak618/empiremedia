@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from 'react'
+import Header from './components/Header'
+import GlobalStyles from './styles/GlobalStyles'
+import { HashRouter, Route, Switch } from 'react-router-dom'
+import Overview from './pages/Overview'
+import History from './pages/History'
+import { Container } from './styles/Container'
+import Buttons from './components/Buttons'
+import { useDispatch } from 'react-redux'
+import { loadCoinData } from './store/actions/coin-actions'
 
 function App() {
+  const dispatch = useDispatch()
+  useEffect(() => {
+    dispatch(loadCoinData('1min'))
+  })
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <HashRouter>
+      <Container>
+        <GlobalStyles />
+        <Header />
+        <Buttons />
+
+        <Switch>
+          <Route path='/' exact component={Overview} />
+          <Route path='/history' exact component={History} />
+        </Switch>
+      </Container>
+    </HashRouter>
+  )
 }
 
-export default App;
+export default App
