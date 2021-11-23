@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.js": "/empiremedia/static/js/main.29ba863b.chunk.js",
+    "main.js.map": "/empiremedia/static/js/main.29ba863b.chunk.js.map",
+    "runtime-main.js": "/empiremedia/static/js/runtime-main.5db89c08.js",
+    "runtime-main.js.map": "/empiremedia/static/js/runtime-main.5db89c08.js.map",
+    "static/js/2.19487f33.chunk.js": "/empiremedia/static/js/2.19487f33.chunk.js",
+    "static/js/2.19487f33.chunk.js.map": "/empiremedia/static/js/2.19487f33.chunk.js.map",
+    "index.html": "/empiremedia/index.html",
+    "static/js/2.19487f33.chunk.js.LICENSE.txt": "/empiremedia/static/js/2.19487f33.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5db89c08.js",
+    "static/js/2.19487f33.chunk.js",
+    "static/js/main.29ba863b.chunk.js"
+  ]
+}
